@@ -23,6 +23,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-around;
+}
+
+.stats-container:hover {
     cursor: pointer;
     box-shadow: 0 0 30px lightblue;
 }
