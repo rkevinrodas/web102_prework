@@ -170,9 +170,18 @@ const secondGameContainer = document.getElementById("second-game");
 const sortedGames =  GAMES_JSON.sort( (item1, item2) => {
     return item2.pledged - item1.pledged;
 });
+console.log(sortedGames);
 
 // use destructuring and the spread operator to grab the first and second games
+const [firstGame, secondGame] = [sortedGames[0], sortedGames[1]];
+const [firstName, secondName] = [firstGame.name, secondGame.name];
 
 // create a new element to hold the name of the top pledge game, then append it to the correct element
+const firstGameElement = document.createElement("p");
+firstGameElement.innerHTML = firstName;
+firstGameContainer.appendChild(firstGameElement);
 
 // do the same for the runner up item
+const secondGameElement = document.createElement("p");
+secondGameElement.innerHTML = secondName;
+secondGameContainer.appendChild(secondGameElement);
